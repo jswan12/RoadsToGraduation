@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduation Pathway</title>
+<script type="text/javascript">
+function whichsite(form){
+	var sites = form.elements.site, i = sites.length;
+	while (--i > -1){
+		if(sites[i].checked){
+			return sites[i].value;
+		}
+	}
+}
+</script>
+<style>
+div {
+	text-align: left;
+	display: inline-block;
+	
+}
+</style>
+</head>
+<center><h2>What graduation pathway are you interested in?</h2></center>
+<center><body>
+<form action="#" onsubmit="window.open(whichsite(this), '_self'); return false;" style="">
+<div>
+	<label><input type="radio" name="site" value="DHS_DMandET.html" checked>Digital Media and Entertainment Technology</label><br>
+	<label><input type="radio" name="site" value="DHS_HSPCandM.html">Health Sciences - Patient Care and Management</label><br>
+	<label><input type="radio" name="site" value="DHS_HTCandR.html">Hospitality, Tourism, Culinary, and Retail</label><br>
+	<label><input type="radio" name="site" value="DHS_IT.html">Information Technology</label><br>
+    <label><input type="radio" name="site" value="DHS_MCCandL.html">Manufacturing, Construction Crafts, and Logistics</label>
+</div><br><br>
+<button type="button" onClick="location.href='PickSchool.html'">Back</button>
+<button type="submit" onClick="submit">Next</button>
+</form>
+</body></center>
+</html>
